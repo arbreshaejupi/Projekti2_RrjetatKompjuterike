@@ -20,7 +20,7 @@ def handle_client(conn, addr):
         # msg = f"Msg received: {msg}"
         msg = wikipedia.summary(msg, sentences=1)
 
-       conn.send(msg.encode(FORMAT))
+        conn.send(msg.encode(FORMAT))
 
     conn.close()
 
