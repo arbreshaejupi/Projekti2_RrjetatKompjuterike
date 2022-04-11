@@ -37,10 +37,12 @@ def file_type(type):
             # open and read the file after the appending:
             f = open("write.txt", "r")
             print(f.read())
+        case 'execute':
+            print("Execute..")
 
 
 if __name__ == "__main__":
     main()
-    type="write"
+    type=input("Choose read, write or execute: ")
     print(file_type(type))
 
