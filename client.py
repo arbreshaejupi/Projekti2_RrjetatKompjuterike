@@ -12,3 +12,15 @@ def main():
     client.connect(ADDR)
     print(f"[CONNECTED] Client connected to server at {IP}:{PORT}")
     connected = True
+    while connected:
+        msg = input("Type for something you want to search> ")
+
+        client.send(msg.encode(FORMAT))
+
+        if msg == DISCONNECT_MSG:
+            connected = False
+        else:
+            msg = client.recv(SIZE).decode(FORMAT)
+            print(f"[SERVER] {msg}")
+    
+   
