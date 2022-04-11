@@ -24,3 +24,24 @@ def main():
             print(f"[SERVER] {msg}")
     
    
+
+    def file_type(type):
+    match type:
+        case 'read':
+           f = open("read.txt", "r")
+           print(f.read())
+        case 'write':
+            f = open("write.txt", "a")
+            f.write("Now the file has more content!")
+            f.close()
+
+            # open and read the file after the appending:
+            f = open("write.txt", "r")
+            print(f.read())
+
+
+if __name__ == "__main__":
+    main()
+    type="write"
+    print(file_type(type))
+
