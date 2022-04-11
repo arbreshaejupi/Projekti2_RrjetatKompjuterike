@@ -24,8 +24,7 @@ def main():
             print(f"[SERVER] {msg}")
     
    
-
-    def file_type(type):
+def file_type(type):
     match type:
         case 'read':
            f = open("read.txt", "r")
